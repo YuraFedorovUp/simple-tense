@@ -9,9 +9,9 @@ import ru.vtb.expertconclusions.outletcreateapi.enams.ShaffleEnam;
 @UtilityClass
 public class ManagedConstant {
     //время в милисекундах на каждое cлово  1000L  - это 1 секунда
-    public final static Long timeToWait = 5000L;
+    public final static Long timeToWait = 2300L;
     //время в милисекундах на каждое упражнение  180000L  - это 3 секунды
-    public final static Long timeToSwitch = 100000L;
+    public final static Long timeToSwitch = 9000000L;
 
     //язык
     public final static LanguageEnam language = LanguageEnam.Russian;

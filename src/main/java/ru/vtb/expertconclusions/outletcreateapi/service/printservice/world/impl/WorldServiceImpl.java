@@ -60,13 +60,14 @@ public class WorldServiceImpl implements WorldService {
 
     private String getTense() {
         Map<Integer, String> map = Map.of(0, "Настоящее", 1, "Прошедшее", 2, "Будущее");
-        return map.get(getRandom(3));
+//        return map.get(getRandom(3));
 //        return map.get(2);
-//        return map.get(data.getTenseCount());
+        return map.get(data.getTenseCount());
 //        return map.get(0);
     }
 
     private String getPronoun() {
+        getPronounCount();
         Map<Integer, String> map = Map.of(0, "Я", 1, "Мы", 2, "Ты", 3, "Вы", 4, "Он", 5, "Она", 6, "Оно", 7, "Они");
         return map.get(getRandom(8));
 //        return map.get(getPronounCount());
@@ -109,7 +110,7 @@ public class WorldServiceImpl implements WorldService {
     }
 
     private boolean isNeedSwitch(int pronounCount) {
-        return (data.getCount() * timeToSwitch + data.getStartTime() <= System.currentTimeMillis());
+        return (data.getCount() * timeToSwitch + data.getStartTime() >= System.currentTimeMillis());
 
     }
 }
